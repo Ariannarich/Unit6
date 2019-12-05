@@ -16,7 +16,7 @@ public class ArrayCreation {
 
     public static String stringArray(String[] friends) {
         String blank = "";
-        if (5 != friends[friends.length])
+        if (5 != friends[friends.l ength])
             return blank;
         else {
 
