@@ -16,20 +16,27 @@ public class ArrayCreation {
 
     public static String stringArray(String[] friends) {
         String blank = "";
-        if (5 != friends[friends.l ength])
+        String blank2 = "";
+        if (friends.length != 5)
             return blank;
         else {
+            for (int name = 0; name <= 5; name++) {
+                for (int num = 0; num <= friends[name].length(); num++) {
+                    blank2+= friends[name].length() + " ";
 
-            for (int name = 0; name <= 5; name++)
-                for (int letter = 0; letter <= friends[name].length(); letter++)
-                    blank += letter + "";
+
+                }
+            }
         }
-        return blank;
+        return blank2;
     }
 
     public static void main(String[] args) {
         double[] numbers = {89, 75, 100};
         System.out.print(getAverage(numbers));
+        String[] names = {"Fred", "Barney", "Betty", "Wilma", "Pebbles"};
+        System.out.println(stringArray(names));
+
 
     }
 
