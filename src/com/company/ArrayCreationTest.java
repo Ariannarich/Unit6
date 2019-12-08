@@ -92,7 +92,8 @@ public class ArrayCreationTest {
                     foundPhrase6 && foundPhrase7 && foundPhrase8 && foundPhrase9 && foundPhrase10 && foundPhrase11 &&
                     foundPhrase12 && foundPhrase13;
 
-            assertTrue(foundAll);
+
+        assertTrue(foundAll);
         }
 
 

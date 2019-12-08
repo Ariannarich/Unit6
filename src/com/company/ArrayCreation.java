@@ -16,33 +16,38 @@ public class ArrayCreation {
 
     public static String stringArray(String[] friends) {
         String blank = "";
-        String blank2 = "";
         if (friends.length != 5)
             return blank;
         else {
-            for (int name = 0; name <= 5; name++) {
-                for (int num = 0; num <= friends[name].length(); num++) {
-                    blank2+= friends[name].length() + " ";
+                for (int num = 0; num < friends.length; num++) {
+                    blank+= friends[num].length() + " ";
 
 
                 }
             }
-        }
-        return blank2;
+        return blank;
     }
 
     public static void main(String[] args) {
-        double[] numbers = {89, 75, 100};
-        System.out.print(getAverage(numbers));
-        String[] names = {"Fred", "Barney", "Betty", "Wilma", "Pebbles"};
-        System.out.println(stringArray(names));
+      System.out.print(countryData());
 
 
     }
 
     public static String countryData() {
-        String blank = "";
-        return blank;
+        String[] countries = {"China", "Egypt", "France", "South Korea", "Germany", "India", "Japan",
+                "Ghana", "Kenya", "Mexico", "United Kingdom", "Burkina Faso", "United States"};
+
+        String[] capitals = {"Beijing", "Cairo", "Paris", "Seoul", "Berlin", "New Delhi", "Tokyo",
+                "Accra", "Nairobi", "Mexico City", "London", "Ouagadougou", "Washington D.C."};
+
+        String[] languages = {"Mandarin", "Arabic", "French", "Korean", "German", "Hindi",
+                "Japanese", "Akuapem Twi", "Swahili", "Spanish", "English", "French", "English"};
+
+        int index = (int) (Math.random() * (countries.length-1)+ 1);
+         return "The capital of " + countries[index] + " is " + capitals[index] + " and the primary language is " + languages[index]
+        + ".";
+
     }
 }
 
