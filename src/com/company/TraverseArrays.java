@@ -3,10 +3,8 @@ package com.company;
 public class TraverseArrays {
     public static int countEven(int[] num) {
         int even = 0;
-
-        for (int i = 0; 0 < num.length-1; i++) {
-            for (int j = 0; j <= num[i]; j++)
-                if (j % 2 == 0)
+        for (int i = 0; i < num.length; i++) {
+                if (num[i] % 2 == 0)
                     even++;
         }
         return even;
@@ -15,11 +13,10 @@ public class TraverseArrays {
     public static int[] buildArray(int n) {
 
         int[] arr = new int[n];
-        int i = 0;
-        while (i < arr.length) {
-            for (int j = 0; j < arr[i]; j++)
-                i += 1;
-            i++;
+
+        for(int i = 0;i < arr.length;i++)
+        {
+            arr[i]= i;
         }
         return arr;
     }
@@ -27,9 +24,8 @@ public class TraverseArrays {
     public static boolean sum28(int[] num) {
         int even = 0;
 
-        for (int i = 0; 0 < num.length; i++) {
-            for (int j = 0; j <= num[i]; j++)
-                if (j == 2)
+        for (int i = 0; i < num.length; i++) {
+                if (num[i] == 2)
                     even += 2;
         }
         if (even == 8)
@@ -39,18 +35,16 @@ public class TraverseArrays {
     }
 
     public static int[] zeroMax(int[] og) {
-        for (int i = 0; 0 < og.length; i++) {
-            for (int j = 0; j <= og[i]; j++)
-                if (og[i] == 0)
+        for (int i = 0; i < og.length; i++) {
+                if (og[i] == 0 )
                     if (og[i + 1] % 2 != 0)
-                        og[i + 1] = og[i];
+                        og[i]= og[i + 1];
+                    else
+                        og[i]=og[0];
 
 
         }
         return og;
     }
-    public void selfDivisor()
-    {
 
-    }
 }
