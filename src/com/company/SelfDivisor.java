@@ -35,12 +35,16 @@ public class SelfDivisor
     public static int[] firstNumSelfDivisors(int start, int num)
     {
         int[] arr = new int[num];
-        arr[0]=start;
-        for(int i =0; i < arr.length; i++)
-            if((arr[i] / 10) % arr[i] == 0)
-                arr[i] = start++;
-            else
-                arr[i] = start++;
+        int i=0;
+        while ( i < num) {
+            while (!isSelfDivisor(start)) {
+                arr[i] =  start++;
+            }
+            arr[i]= start++;
+
+            i++;
+        }
+
            return arr;
     }
 
