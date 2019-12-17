@@ -34,8 +34,7 @@ public class TraverseArrays {
             return false;
     }
 
-    public static int[] zeroMax(int[] og) {
-        for (int i = 0; i < og.length; i++) {
+    public static int[] zeroMax(int[] og) { for (int i = 0; i < og.length; i++) {
                 if (og[i] == 0 )
                     if (og[i + 1] % 2 != 0)
                         og[i]= og[i + 1];
