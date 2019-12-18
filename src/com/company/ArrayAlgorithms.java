@@ -40,14 +40,24 @@ public class ArrayAlgorithms {
 
     public static int[] leftShift(int[] arr, int shift) {
         int[] newArr = new int[arr.length + shift];
-        for (int i : newArr)
-            for (int j = 0; j < i; j++) {
-                newArr[i] = j;
-            }
+        for (int i = 0; i < arr.length; i++)
+            for (int j = 0; j <= arr[i]; j++)
+                    newArr[i] = j;
         return newArr;
     }
 
     public static int[] reverseArray(int[] arr) {
+       int temp = 0;
+       int j= arr.length-1;
+        while( j > 0){
+            temp = arr[j];
+            for(int i =0;i <= temp; i++)
+             arr[i]=temp;
+            j--;
+        }
+
+
+
    return arr;
     }
     }
