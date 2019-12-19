@@ -24,7 +24,7 @@ public class ArrayAlgorithms {
         boolean dupe = true;
         for (int i : arr)
             for (int j : arr)
-                if (arr[j] == arr[i])
+                if(arr[j] == arr[i])
                     dupe = true;
         return dupe;
     }
@@ -46,18 +46,16 @@ public class ArrayAlgorithms {
         return newArr;
     }
 
-    public static int[] reverseArray(int[] arr) {
-       int temp = 0;
-       int j= arr.length-1;
-        while( j > 0){
-            temp = arr[j];
-            for(int i =0;i <= temp; i++)
-             arr[i]=temp;
-            j--;
-        }
+    public static String reverseArray(int[] arr) {
+       String blank = "";
+        int temp = 0;
+        for(int i = 0; i < arr.length; i++)
+            for(int k = arr[arr.length-1]; k > 0 ;k--) {
+                temp = k;
+                arr[i] = temp;
+                blank+= arr[i] + " ";
+            }
 
-
-
-   return arr;
+   return blank;
     }
     }
