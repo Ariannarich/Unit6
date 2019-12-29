@@ -21,11 +21,13 @@ public class ArrayAlgorithms {
     }
 
     public static boolean hasDupes(int arr[]) {
-        boolean dupe = true;
-        for (int i : arr)
-            for (int j : arr)
-                if(arr[j] == arr[i])
+        boolean dupe = false;
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = i + 1; j < arr.length; j++) {
+                if (arr[j] == arr[i])
                     dupe = true;
+            }
+        }
         return dupe;
     }
 
@@ -49,13 +51,14 @@ public class ArrayAlgorithms {
     public static String reverseArray(int[] arr) {
        String blank = "";
         int temp = 0;
-        for(int i = 0; i < arr.length; i++)
-            for(int k = arr[arr.length-1]; k > 0 ;k--) {
-                temp = k;
-                arr[i] = temp;
-                blank+= arr[i] + " ";
-            }
+        for(int i = 0; i < arr.length/2; i++){
+                temp =  arr[i];
+        arr[i] = arr[arr.length- i-1];
+        arr[arr.length- i - 1] = temp;
 
+            }
+    for(int k : arr)
+     blank+= k +" ";
    return blank;
     }
     }
