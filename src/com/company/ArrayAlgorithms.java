@@ -23,10 +23,19 @@ public class ArrayAlgorithms {
     public static boolean hasDupes(int arr[]) {
         boolean dupe = false;
         for (int i = 0; i < arr.length; i++) {
-            for (int j = i + 1; j < arr.length; j++) {
-                if (arr[j] == arr[i])
+            for (int j = arr.length - 1; j >= i; j--) {
+
+                if (arr[j] == arr[i]) {
                     dupe = true;
+                    break;
+                }
+                else
+                    dupe = false;
             }
+            if (dupe == true)
+                break;
+            else
+                dupe =false;
         }
         return dupe;
     }
