@@ -25,14 +25,12 @@ public class BirthdayParadox {
     public static void main(String[] args) {
         int dupe = 0;
         int percentage = 0;
-        int numOfTimes=100;
-        {
+        int numOfTimes= 10;
             for (int k = 0; k <= numOfTimes; k++) {
                  if ((hasDupes(dates(23))) == true)
                     dupe++;
 
             }
-        }
         percentage = (dupe/numOfTimes) * 100;
         System.out.print("The percent of times there were duplicate birthdays is " + percentage +"%");
 
