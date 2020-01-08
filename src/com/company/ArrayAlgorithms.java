@@ -21,25 +21,17 @@ public class ArrayAlgorithms {
     }
 
     public static boolean hasDupes(int arr[]) {
-        boolean dupe = false;
-        for (int i = 0; i < arr.length; i++) {
-            for (int j = arr.length - 1; j >= i; j--) {
-
-                if (arr[j] == arr[i]) {
+boolean dupe = false;
+        for (int value : arr) {
+            for (int j = arr.length-1; j >= 0; j--) {
+                if (value == arr[j] && v) {
                     dupe = true;
                     break;
                 }
-                else
-                    dupe = false;
             }
-            if (dupe == true)
-                break;
-            else
-                dupe =false;
         }
-        return dupe;
+return dupe;
     }
-
     public static int countEvens(int arr[]) {
         int even = 0;
         for (int i = 0; i < arr.length; i++) {
@@ -58,7 +50,6 @@ public class ArrayAlgorithms {
     }
 
     public static String reverseArray(int[] arr) {
-       String blank = "";
         int temp = 0;
         for(int i = 0; i < arr.length/2; i++){
                 temp =  arr[i];
@@ -66,8 +57,8 @@ public class ArrayAlgorithms {
         arr[arr.length- i - 1] = temp;
 
             }
-    for(int k : arr)
-     blank+= k +" ";
-   return blank;
+
+
+   return printArray(arr);
     }
     }
