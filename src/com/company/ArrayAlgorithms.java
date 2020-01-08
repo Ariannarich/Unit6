@@ -21,16 +21,14 @@ public class ArrayAlgorithms {
     }
 
     public static boolean hasDupes(int arr[]) {
-boolean dupe = false;
-        for (int value : arr) {
-            for (int j = arr.length-1; j >= 0; j--) {
-                if (value == arr[j] && v) {
-                    dupe = true;
-                    break;
+        for (int i = 0; i < arr.length; i++) {
+         for (int j = arr.length - 1; j > 0; j--) {
+                if (arr[i] == arr[j] && j!= i) {
+                    return true;
                 }
             }
         }
-return dupe;
+return false;
     }
     public static int countEvens(int arr[]) {
         int even = 0;
